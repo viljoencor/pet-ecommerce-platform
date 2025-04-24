@@ -1,0 +1,16 @@
+# build-dotnet.yml
+name: Build and Deploy .NET Core API
+on:
+  push:
+    paths:
+      - 'backend/dotnet/**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+      - run: dotnet restore ./backend/dotnet/Ecommerce.Api
+      - run: dotnet build --configuration Release ./backend/dotnet/Ecommerce.Api
