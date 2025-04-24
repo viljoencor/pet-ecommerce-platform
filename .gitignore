@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.pdb
+*.cache
+
+# Node / React
+node_modules/
+build/
+dist/
+.env
+.DS_Store
+
+# CDK
+cdk.out/
